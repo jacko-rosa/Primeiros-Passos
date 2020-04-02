@@ -13,9 +13,13 @@ body
 }
 ul
 {
-    padding: 0px!important;
+    padding: 0px;
 }
-
+button
+{
+    z-index: 9;
+    padding: 0;
+}
 /*-------------------------------------------------header1------------------------------------------------------------*/
 .header1
 {
@@ -26,17 +30,21 @@ ul
 }
 .soon
 {
-    padding-top: 15px;
-    width: 80%;
-    height: 40px;
+    width: 75%;
+    height: 55px;
     float: left;
-    margin: auto;
+}
+.soon img
+{
+margin-left: 15px;
+margin-top: 15px;
 }
 .social_network
 {
     width: 20%;
     height: 55px;
     float: right;
+    cursor: default;
 }
 .social_network ul li
 {
@@ -46,8 +54,9 @@ ul
 .social_network ul li a
 {
     float: right;
-    width: 45px;
-    margin: auto;
+    width: 25px;
+    margin: auto 12px;
+    cursor: pointer;
 }
 /*-------------------------------------------------header2------------------------------------------------------------*/
 .header2
@@ -56,6 +65,7 @@ ul
     width: 100%;
     height: 55px;
     margin: auto;
+    border-bottom: 3px solid #cccccc;
 }
 .menu
 {
@@ -67,9 +77,14 @@ ul
 }
 .menu ul li
 {
+    height: 38px;
     display: inline;
     margin-left: 15px;
     float: left;
+}
+.menu ul li:hover
+{
+    border-bottom: 3px solid #0000ff;
 }
 .menu ul li a
 {
@@ -77,26 +92,106 @@ ul
     font-size: 18px;
     text-transform: uppercase;
     text-decoration: none;
-    margin-right: 5px;
     float: left;
+}
+.menu ul li a:hover
+{
+    color: #0000ff;
 }
 .search
 {
     float: right;
-    padding-top: 16px;
     width: 196px;
+    height: 20px;
+    margin: 16px 0px 0px 0px;
+    padding: 0px;
 }
 .search input
 {
-    width: 180px;
+    width: 196px;
     font-size: 14px;
     height: 20px;
-    text-align: left;
     padding-left: 15px;
     background-image: url("../IMG/Lupa.png");
     background-repeat: no-repeat;
     background-position: 96% 2px;
     border: 1px solid black;
+}
+.search textarea
+{
+    width: 100px;
+}
+/*-------------------------------------------------header3------------------------------------------------------------*/
+.slider
+{
+    height: 300px;
+    width: 100%;
+}
+/*---botton next/prev---*/
+button.slick-prev
+{
+    width: 25px;
+    height: 25px;
+    font-size: 0px;
+    border: none;
+    position: absolute;
+    top: 50%;
+    left: 13%;
+    background-image: url("../IMG/SliderPrevious.png");
+}
+button.slick-next
+{
+    width: 25px;
+    height: 25px;
+    font-size: 0px;
+    border: none;
+    position: absolute;
+    top: 50%;
+    right: 13%;
+    background-image: url("../IMG/SliderNext.png");
+}
+button.slick-prev:hover
+{
+    background-image: url("../IMG/SliderPreviousHover.png");
+    cursor: pointer;
+}
+button.slick-next:hover
+{
+    background-image: url("../IMG/SliderNextHover.png");
+    cursor: pointer;
+}
+/*---slick-dots---*/
+ul.slick-dots
+{
+    width: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    margin: -30px auto auto;
+}
+ul.slick-dots li
+{
+    font-size: 0px;
+    text-decoration: none;
+    border-radius: 50%;
+}
+ul.slick-dots li button
+{
+    width: 15px;
+    height: 15px;
+    font-size: 0px;
+    border: 3px solid #000000;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+}
+ul.slick-dots li button:hover
+{
+    background: #ffffff;
+}
+ul.slick-dots li.slick-active
+{
+    background: #0000ff;
 }
 
 
